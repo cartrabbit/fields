@@ -37,6 +37,7 @@ class Zone extends SingleDropDown
             if (empty($value)) {
                 $value = $field->field_default;
             }
+            $field->field_value = Countries::where('enabled', 1)->get()->pluck('country_name', 'country_isocode_3')->toArray();
         } elseif ($field->field_options['zone_type'] == 'zone') {
             $stateId = str_replace(array('[', ']'), array('_', ''), $map);
             $dropdown = '';

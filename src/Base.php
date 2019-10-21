@@ -194,9 +194,9 @@ class Base
                         $data->$namekey = $field->field_default;
                     }
                 }
-                if (isset($field->field_type) && isset($field->field_options) && $field->field_type == 'zone' && !empty($field->field_options['zone_type'])) {
+                /*if (isset($field->field_type) && isset($field->field_options) && $field->field_type == 'zone' && !empty($field->field_options['zone_type'])) {
                     $this->handleZone($field, $test, $data, $area);
-                }
+                }*/
             }
         }
     }
